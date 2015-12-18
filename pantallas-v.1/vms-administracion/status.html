@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <!-- Meta, title, CSS, favicons, etc. -->
+  <meta charset="utf-8">
+  <title>Video Management System</title>
+  
+  <meta name="description" content="A Responsive HTML5 Admin UI Framework">
+  <meta name="author" content="AdminDesigns">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Font CSS (Via CDN) -->
+  <link rel='stylesheet' type='text/css' href='http://fonts.googleapis.com/css?family=Open+Sans:300,400,600'>
+  <!-- Theme CSS -->
+  <link rel="stylesheet" type="text/css" href="assets/skin/default_skin/css/theme.css">
+  <!-- Datatables CSS -->
+  <link rel="stylesheet" type="text/css" href="vendor/plugins/datatables/media/css/dataTables.bootstrap.css">
+  <!-- Favicon -->
+  <link rel="shortcut icon" href="assets/img/favicon.ico">
+
+
+
+</head>
+
+<body class="dashboard-page sb-l-o sb-r-c">
+
+  <!-- Start: Main -->
+  <div id="main">
+
+    <!-- Start: Header -->
+    <header class="navbar navbar-fixed-top">
+      <div class="navbar-branding">
+        <a class="navbar-brand" href="index.html">
+          <img src="assets/img/logos/logo_vms.svg" alt="">
+        </a>
+        <span id="toggle_sidemenu_l" class="ad ad-lines"></span>
+      </div>
+      
+      <ul class="nav navbar-nav navbar-right">
+        
+        <li class="menu-divider hidden-xs">
+          <i class="fa fa-circle"></i>
+        </li>
+        <li class="dropdown">
+          <a href="#"  fw600 p15" data-toggle="dropdown"> <img src="assets/img/avatars/1.jpg" alt="avatar" class="mw30 br64 mr15"> Christian Avalos <span class="caret"></span>
+          </a>
+          <ul class="dropdown-menu" role="menu">
+                        <li>
+                          <a href="editar-user.html">Editar Cuenta</a>
+                        </li>
+       
+                        <li>
+                          <a href="#">Cerrar Sesión</a>
+                        </li>
+                      </ul>
+          
+        </li>
+      </ul>
+
+    </header>
+    <!-- End: Header -->
+
+    <!-- Start: Sidebar Left -->
+    <aside id="sidebar_left" class="nano nano-primary affix">
+
+      <!-- Start: Sidebar Left Content -->
+      <div class="sidebar-left-content nano-content">
+
+<!-- Start: Sidebar Left Menu -->
+         <ul class="nav sidebar-menu">
+        <!-- sidebar progress bars -->
+          
+          <li class="sidebar-label pt20">Menu</li>
+          <li class="active">
+            <a href="index.html">
+              <span class="glyphicon glyphicon-home"></span>
+              <span class="sidebar-title">Escritorio</span>
+            </a>
+          </li>
+                    
+           <li>
+                <a class="accordion-toggle" href="#">
+                  <span class="fa fa-folder"></span>
+                  <span class="sidebar-title">Clientes </span>
+                  <span class="caret"></span>
+                </a>
+                <ul class="nav sub-nav">
+                <li>
+                    <a href="crear-user.html">
+                     <i class="fa fa-folder-open"></i> Crear Cliente </a>
+                  </li>
+                  <li>
+                    <a href="listado-clientes.html">
+                      <i class="fa fa-bars"></i> Listado de Cliente </a>
+                  </li>
+                
+                </ul>
+              </li>
+
+          <li class="sidebar-label pt25 pb10">User Stats</li>
+          <li class="sidebar-stat">
+            <a href="#projectOne" class="fs11">
+              <span class="fa fa-inbox text-info"></span>
+              <span class="sidebar-title text-muted">Almacenamiento</span>
+              <span class="pull-right mr20 text-muted">1,5gb / 5gb</span>
+              <div class="progress progress-bar-xs mh20 mb10">
+                <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="45" aria-valuemin="0" aria-valuemax="100" style="width: 35%">
+                  <span class="sr-only">35%</span>
+                </div>
+              </div>
+            </a>
+          </li>
+          
+          <li class="sidebar-stat">
+            <a href="#projectOne" class="fs11">
+              <span class="fa fa-exchange text-warning"></span>
+              <span class="sidebar-title text-muted">Tráfico</span>
+              <span class="pull-right mr20 text-muted">35gb / 1000gb</span>
+              <div class="progress progress-bar-xs mh20 mb10">
+                <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="45" aria-valuemin="0" aria-valuemax="100" style="width: 35%">
+                  <span class="sr-only">80%</span>
+                </div>
+              </div>
+            </a>
+          </li>
+          
+          <li class="sidebar-stat">
+            <a href="#projectOne" class="fs11">
+              <span class="fa fa-server text-success"></span>
+              <span class="sidebar-title text-muted">Transcoding</span>
+              <span class="pull-right mr20 text-muted">35gb / 1000gb</span>
+              <div class="progress progress-bar-xs mh20 mb10">
+                <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="45" aria-valuemin="0" aria-valuemax="100" style="width: 35%">
+                  <span class="sr-only">80%</span>
+                </div>
+              </div>
+            </a>
+          </li>
+          
+                 </ul>
+        <!-- End: Sidebar Menu -->
+
+	      <!-- Start: Sidebar Collapse Button -->
+	      <div class="sidebar-toggle-mini">
+	        <a href="#">
+	          <span class="fa fa-sign-out"></span>
+	        </a>
+	      </div>
+	      <!-- End: Sidebar Collapse Button -->
+
+      </div>
+      <!-- End: Sidebar Left Content -->
+
+    </aside>
+    <!-- End: Sidebar Left -->
+
+    <!-- Start: Content-Wrapper -->
+    <section id="content_wrapper">     
+
+      <!-- Start: Topbar -->
+      <header id="topbar">
+        <div class="topbar-left">
+          <ol class="breadcrumb">
+            <li class="crumb-active">
+              <a>Escritorio</a>
+            </li>
+            <li class="crumb-link">
+              <a href="listado-clientes.html">Listado de Clientes</a>
+            </li>
+            <li class="crumb-trail">Detalle Cliente</li>
+          </ol>
+        </div>
+        <div class="topbar-right">
+         <a href="crear-user.html" type="button" class="btn btn-rounded btn-success btn-block"><i class="fa fa-user"></i> Crear Cliente</a>
+        </div>
+      </header>
+      <!-- End: Topbar -->
+
+      <!-- Begin: Content -->
+      <section id="content" class="animated fadeIn">
+
+          <div class="row">
+          
+          <div class="col-md-4">
+             <div class="panel panel-default panel-border top">
+              <div class="panel-heading">
+                <span class="panel-title">Usuario</span>
+                <div class="widget-menu pull-right ">
+                  <a href="editar-user.html"><span class="label bg-primary ">Editar</span></a>
+                </div>
+              </div>
+              <div class="panel-body">
+              <table class="table mbn tc-med-1 tc-bold-last tc-fs13-last">
+                        <thead>
+                          <tr class="hidden">
+                            <th>Source</th>
+                            <th>Count</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td class="va-m fw600 text-muted">
+                               Usuario</td>
+                            <td class="fs12 fw600 text-right">cavalos</td>
+                          </tr>
+                          <tr>
+                            <td class="va-m fw600 text-muted">
+                              Email</td>
+                            <td class="fs12 fw600 text-right">cavalos@grupoz.cl</td>
+                          </tr>
+                          <tr>
+                            <td class="va-m fw600 text-muted">
+                              Nombre Cliente</td>
+                            <td class="fs12 fw600 text-right">Christian Avalos Mena</td>
+                          </tr>
+                          <tr>
+                            <td class="va-m fw600 text-muted">
+                              Panel</td>
+                            <td class="fs12 fw600 text-right">http://...</td>
+                          </tr>
+                        </tbody>
+                      </table>
+              </div>
+              </div>
+            </div>
+          
+           <div class="col-md-4">
+             <div class="panel panel-default panel-border top">
+              <div class="panel-heading">
+                <span class="panel-title">Facturación</span>
+                <div class="widget-menu pull-right">
+                  <a href="editar-user.html"><span class="label bg-primary ">Editar</span></a>
+                </div>
+              </div>              <div class="panel-body">
+              <table class="table mbn tc-med-1 tc-bold-last tc-fs13-last">
+                        <thead>
+                          <tr class="hidden">
+                            <th>Source</th>
+                            <th>Count</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td class="va-m fw600 text-muted">
+                               RUT</td>
+                            <td class="fs12 fw600 text-right">15.909.888-4</td>
+                          </tr>
+                          <tr>
+                            <td class="va-m fw600 text-muted">
+                             Plazo Contrato</td>
+                            <td class="fs12 fw600 text-right">1-3 Meses</td>
+                          </tr>
+                          <tr>
+                            <td class="va-m fw600 text-muted">
+                              Creación</td>
+                            <td class="fs12 fw600 text-right">10-09-2015</td>
+                          </tr>
+                          <tr>
+                            <td class="va-m fw600 text-muted">
+                              Estado</td>
+                            <td class="fs12 fw600 text-right">Pagado</td>
+                          </tr>
+                        </tbody>
+                      </table>
+              </div>
+              </div>
+            </div>
+            
+             <div class="col-md-4">
+             <div class="panel panel-default panel-border top">
+              <div class="panel-heading">
+                <span class="panel-title">Cuenta</span>
+                <div class="widget-menu pull-right">
+                  <a href="editar-user.html"><span class="label bg-primary ">Editar</span></a>
+                </div>
+              </div>
+              <div class="panel-body">
+              <table class="table mbn tc-med-1 tc-bold-last tc-fs13-last">
+                        <thead>
+                          <tr class="hidden">
+                            <th>Source</th>
+                            <th>Count</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td class="va-m fw600 text-muted">
+                               Almacenamiento</td>
+                            <td class="fs12 fw600 text-right">120 GB</td>
+                          </tr>
+                          <tr>
+                            <td class="va-m fw600 text-muted">
+                             Transcoding</td>
+                            <td class="fs12 fw600 text-right">50 GB</td>
+                          </tr>
+                          <tr>
+                            <td class="va-m fw600 text-muted">
+                              Transferencia</td>
+                            <td class="fs12 fw600 text-right">4.000 GB</td>
+                          </tr>
+                          <tr>
+                            <td class="va-m fw600 text-muted">
+                              Servicio</td>
+                            <td class="fs12 fw600 text-right">Activo</td>
+                          </tr>
+                        </tbody>
+                      </table>
+              </div>
+              </div>
+            </div>
+
+<!--/////////////////////////////////////////////////////////////////////////////-->          
+            <div class="col-md-4">
+             <div class="panel panel-info panel-border top">
+              <div class="panel-heading">
+                <span class="panel-title">Almacenamiento <b>60%</b></span>
+                <div class="widget-menu pull-right mr10">
+                  <div class="progress progress-bar-sm" style="width: 120px;">
+                    <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%">
+                      <span class="sr-only">60% Complete (warning)</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="col-md-4">
+             <div class="panel panel-warning panel-border top">
+              <div class="panel-heading">
+                <span class="panel-title">Tráfico <b>2gb / 40gb</b></span>
+                <div class="widget-menu pull-right mr10">
+                  <div class="progress progress-bar-sm" style="width: 120px;">
+                    <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%">
+                      <span class="sr-only">60% Complete (warning)</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="col-md-4">
+             <div class="panel panel-success panel-border top">
+              <div class="panel-heading">
+                <span class="panel-title">Transcoding <b>50gb / 100gb</b></span>
+                <div class="widget-menu pull-right mr10">
+                  <div class="progress progress-bar-sm" style="width: 120px;">
+                    <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%">
+                      <span class="sr-only">60% Complete (warning)</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-12">
+          <div class="panel">
+              <div class="panel-heading">
+                <span class="panel-title">Evolución del Servicio</span>
+                <ul class="nav panel-tabs">
+                  <li class="active">
+                    <a href="#tab1" data-toggle="tab">Semanal</a>
+                  </li>
+                  <li class="">
+                    <a href="#tab2" data-toggle="tab">Mensual</a>
+                  </li>
+                  <li class="">
+                    <a href="#tab3" data-toggle="tab">Anual</a>
+                  </li>
+                </ul>
+              </div>
+              <div class="panel-body">
+                <div class="tab-content">
+                  <div id="tab1" class="tab-pane active">
+                 <div class="panel-menu">
+              <div class="chart-legend" data-chart-id="#high-area">
+                <a data-chart-id="0" class="legend-item btn btn-sm btn-info ph20 mr10">Data 1</a>
+                <a data-chart-id="1" class="legend-item btn btn-sm btn-warning mr10">Data 2</a>
+                <a data-chart-id="2" class="legend-item btn btn-sm btn-success mr10">Data 3</a>
+              </div>
+            </div>
+            <div class="panel-body pn">
+              <div id="high-area" style="width: 100%; height: 230px; margin: 0 auto"></div>
+            </div>
+                  </div>
+                  <div id="tab2" class="tab-pane">
+                    <p>Praesent non nibh nisi. Proin eu massa faucibus, volutpat tellus eu, dapibus velit. Sed feugiat risus at velit lobortis porta.</p>
+                  </div>
+                  
+                  <div id="tab3" class="tab-pane">
+                    <p>Praesent non nibh nisi. Proin eu massa faucibus, volutpat tellus eu, dapibus velit. Sed feugiat risus at velit lobortis porta.</p>
+                  </div>
+                </div>
+              </div>
+          </div>    
+          </div>
+            <!-- end: .col-md-12.admin-grid -->
+
+            
+            
+        
+          </div>
+
+
+      </section>
+      <!-- End: Content -->
+
+      <!-- Begin: Page Footer -->
+      <footer id="content-footer">
+        <div class="row">
+          <div class="col-md-6">
+            <span class="footer-legal">© 2015 GrupoZ</span>
+          </div>
+          
+        </div>
+      </footer>
+      <!-- End: Page Footer -->
+
+    </section>
+    <!-- End: Content-Wrapper -->
+
+
+  </div>
+
+  <!-- BEGIN: PAGE SCRIPTS -->
+
+  <!-- jQuery -->
+  <script src="vendor/jquery/jquery-1.11.1.min.js"></script>
+  <script src="vendor/jquery/jquery_ui/jquery-ui.min.js"></script>
+
+  <!-- Sparkline Local -->
+  <script src="vendor/plugins/sparkline/jquery.sparkline.min.js"></script>
+
+  <!-- Charts JS -->
+  <script src="vendor/plugins/highcharts/highcharts.js"></script>
+  <script src="vendor/plugins/circles/circles.js"></script>
+
+  <!-- Theme Javascript -->
+  <script src="assets/js/utility/utility.js"></script>
+  <script src="assets/js/demo/demo.js"></script>
+  <script src="assets/js/main.js"></script>
+
+  <!-- Page Javascript -->
+  <script src="assets/js/demo/charts/highcharts.js"></script>
+
+  <script type="text/javascript">
+  jQuery(document).ready(function() {
+
+    "use strict";
+
+    // Init Theme Core    
+    Core.init();
+
+    // Init Demo JS  
+    Demo.init();
+
+    // This page contains more Initilization Javascript than normal.
+    // As a result it has its own js page. See charts.js for more info
+    demoHighCharts.init();
+
+  });
+  </script>
+  <!-- END: PAGE SCRIPTS -->
+
+</body>
+
+</html>

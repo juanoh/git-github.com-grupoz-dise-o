@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <!-- Meta, title, CSS, favicons, etc. -->
+  <meta charset="utf-8">
+  <title>Video Management System por GrupoZ - VMS</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Font CSS (Via CDN) -->
+  <link rel='stylesheet' type='text/css' href='http://fonts.googleapis.com/css?family=Open+Sans:300,400,600'>
+  <!-- Theme CSS -->
+  <link rel="stylesheet" type="text/css" href="assets/skin/default_skin/css/theme.css">
+  <!-- Favicon -->
+  <link rel="shortcut icon" href="assets/img/favicon.ico">
+
+
+</head>
+
+<body class="dashboard-page sb-l-o sb-r-c datatables-page" data-spy="scroll" data-target="#nav-spy" data-offset="300">
+
+  <!-- Start: Main -->
+  <div id="main">
+
+    <!-- Start: Header -->
+    <header class="navbar navbar-fixed-top">
+      <div class="navbar-branding">
+        <a class="navbar-brand" href="index.html">
+          <img src="assets/img/logos/logo_vms.svg" alt="">
+        </a>
+        <span id="toggle_sidemenu_l" class="ad ad-lines"></span>
+      </div>
+      
+      <form class="navbar-form navbar-left navbar-search" role="search">
+        <div class="form-group">
+          <input type="text" class="form-control" placeholder="Buscar vídeos..." value="Buscador...">
+        </div>
+      </form>
+      
+      <ul class="nav navbar-nav navbar-right">
+        <li class="menu-divider hidden-xs">
+          <i class="fa fa-circle"></i>
+        </li>
+        <li class="dropdown">
+          <a href="#"  fw600 p15" data-toggle="dropdown"> <img src="assets/img/avatars/1.jpg" alt="avatar" class="mw30 br64 mr15"> Christian Avalos <span class="caret"></span>
+          </a>
+          <ul class="dropdown-menu" role="menu">
+                        <li>
+                          <a href="edit-user.html">Editar Cuenta</a>
+                        </li>
+                        <li>
+                          <a href="#">Cerrar Sesión</a>
+                        </li>
+                      </ul>
+        </li>
+      </ul>
+
+    </header>
+    <!-- End: Header -->
+
+    <!-- Start: Sidebar Left -->
+    <aside id="sidebar_left" class="nano nano-primary affix">
+      <div class="sidebar-left-content nano-content">
+    <ul class="nav sidebar-menu">
+        <!-- sidebar progress bars -->
+          <li class="sidebar-label pt20">Menu</li>
+          <li class="active">
+            <a href="index.html">
+              <span class="glyphicon glyphicon-home"></span>
+              <span class="sidebar-title">Escritorio</span>
+            </a>
+          </li>
+          
+          <li>
+                <a class="accordion-toggle" href="#">
+                  <span class="fa fa-folder"></span>
+                  <span class="sidebar-title">Biblioteca de Videos </span>
+                  <span class="caret"></span>
+                   
+                </a>
+                <ul class="nav sub-nav">
+                <li>
+                    <a href="biblioteca.html">
+                     <i class="fa fa-folder-open"></i> Todos los Videos </a>
+                  </li>
+                  <li>
+                    <a href="categorias.html">
+                      <i class="fa fa-bars"></i> Categorias </a>
+                  </li>
+                  <li>
+                    <a href="tags.html">
+                      <i class="fa fa-tag"></i> Tags</a>
+                  </li>
+                
+                </ul>
+           </li>
+          
+           <li>
+            <a href="transcoder.html">
+              <span class="fa fa-tasks"></span>
+              <span class="sidebar-title">Transcoder Inbox</span>
+              <span class="sidebar-title-tray">
+                <span class="label label-xs bg-danger">10</span>
+              </span>
+            </a>
+           </li>
+          
+           <li>
+            <a href="stats.html">
+              <span class="fa fa-bar-chart-o"></span>
+              <span class="sidebar-title">Estadísticas</span>
+            </a>
+           </li>
+          
+           <li>
+            <a href="user.html">
+              <span class="fa fa-user"></span>
+              <span class="sidebar-title">Usuarios</span>
+            </a>
+           </li>
+          
+           <li class="sidebar-label pt25 pb10">User Stats</li>
+           <li class="sidebar-stat">
+            <a href="#projectOne" class="fs11">
+              <span class="fa fa-inbox text-info"></span>
+              <span class="sidebar-title text-muted">Almacenamiento</span>
+              <span class="pull-right mr20 text-muted">1,5gb / 5gb</span>
+              <div class="progress progress-bar-xs mh20 mb10">
+                <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="45" aria-valuemin="0" aria-valuemax="100" style="width: 35%">
+                  <span class="sr-only">35% Complete</span>
+                </div>
+              </div>
+            </a>
+           </li>
+          
+           <li class="sidebar-stat">
+             <a href="#projectOne" class="fs11">
+              <span class="fa fa-exchange text-warning"></span>
+              <span class="sidebar-title text-muted">Tráfico</span>
+              <span class="pull-right mr20 text-muted">35gb / 1000gb</span>
+              <div class="progress progress-bar-xs mh20 mb10">
+                <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="45" aria-valuemin="0" aria-valuemax="100" style="width: 35%">
+                  <span class="sr-only">80%</span>
+                </div>
+              </div>
+              </a>
+            </li>
+          
+            <li class="sidebar-stat">
+                <a href="#projectOne" class="fs11">
+                  <span class="fa fa-server text-success"></span>
+                  <span class="sidebar-title text-muted">Transcoding</span>
+                  <span class="pull-right mr20 text-muted">35gb / 1000gb</span>
+                  <div class="progress progress-bar-xs mh20 mb10">
+                    <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="45" aria-valuemin="0" aria-valuemax="100" style="width: 35%">
+                      <span class="sr-only">80%</span>
+                    </div>
+                  </div>
+                </a>
+            </li>
+
+        </ul>
+        <!-- End: Sidebar Menu -->                  
+
+	      <!-- Start: Sidebar Collapse Button -->
+	      <div class="sidebar-toggle-mini">
+	        <a href="#">
+	          <span class="fa fa-sign-out"></span>
+	        </a>
+	      </div>
+	      <!-- End: Sidebar Collapse Button -->
+
+      </div>
+    </aside>
+    <!-- End: Sidebar Left -->
+
+
+    <!-- Start: Content-Wrapper -->
+    <section id="content_wrapper">     
+
+      <!-- Start: Topbar -->
+      <header id="topbar">
+        <div class="topbar-left">
+          <ol class="breadcrumb">
+            <li class="crumb-active">
+              <a>Escritorio</a>
+            </li>
+          </ol>
+        </div>
+        <div class="topbar-right">
+          <a href="drop.html" type="button" class="btn btn-rounded btn-success btn-info btn-block"><i class="fa fa-upload"></i> Subir Vídeo</a>
+        </div>
+      </header>
+      <!-- End: Topbar -->
+
+      <!-- Begin: Content -->
+      <section id="content" class="animated fadeIn">
+      <div class="row">
+
+            <div class="col-md-12 admin-grid">
+
+              <div class="panel sort-disable" id="p0">
+                <div class="panel-heading">
+                  <span class="panel-title">Visión General</span>
+                </div>
+                <div class="panel-body mnw700 of-a">
+                  <div class="row">
+
+                    <!-- Chart Column -->
+                    <div class="col-md-6 pln br-r mvn15">
+                      <h5 class="ml5 mt20 ph10 pb5 br-b fw600">Tráfico Mensual
+                        <small class="pull-right fw600">13,253
+                        </small>
+                      </h5>
+                          <div id="high-column2" style="width: 100%; height: 255px; margin: 0 auto"></div>
+                    </div>
+
+                    <!-- Multi Text Column -->
+                    <div class="col-md-3 br-r">
+                      <h5 class="mt5 ph10 pb5 br-b fw600">Top Navegadores</h5>
+                      <table class="table mbn tc-med-1 tc-bold-last tc-fs13-last">
+                        <thead>
+                          <tr class="hidden">
+                            <th>Source</th>
+                            <th>Count</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td class="va-m fw600 text-muted">
+                               Chrome</td>
+                            <td class="fs15 fw600 text-right">28</td>
+                          </tr>
+                          <tr>
+                            <td class="va-m fw600 text-muted">
+                              Firefox</td>
+                            <td class="fs15 fw600 text-right">25</td>
+                          </tr>
+                          <tr>
+                            <td class="va-m fw600 text-muted">
+                              Safari</td>
+                            <td class="fs15 fw600 text-right">22</td>
+                          </tr>
+                          <tr>
+                            <td class="va-m fw600 text-muted">
+                              Internet Explorer</td>
+                            <td class="fs15 fw600 text-right">18</td>
+                          </tr>
+                          <tr>
+                            <td class="va-m fw600 text-muted">
+                              Android Browser</td>
+                            <td class="fs15 fw600 text-right">12</td>
+                          </tr>
+                          <tr>
+                          <td class="va-m fw600 text-muted">
+                              Opera</td>
+                            <td class="fs15 fw600 text-right">12</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                      
+                    </div>
+
+                    <!-- Flag/Icon Column -->
+                    <div class="col-md-3">
+                      <h5 class="mt5 ph10 pb5 br-b fw600">Top Dispositivos</h5>
+                      <table class="table mbn">
+                        <thead>
+                          <tr class="hidden">
+                            <th>#</th>
+                            <th>First Name</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td class="va-m fw600 text-muted">
+                               Mac</td>
+                            <td class="fs15 fw600 text-right">28</td>
+                          </tr>
+                          <tr>
+                            <td class="va-m fw600 text-muted">
+                               Iphone</td>
+                            <td class="fs15 fw600 text-right">25</td>
+                          </tr>
+                          <tr>
+                            <td class="va-m fw600 text-muted">
+                               Windows</td>
+                            <td class="fs15 fw600 text-right">22</td>
+                          </tr>
+                          <tr>
+                            <td class="va-m fw600 text-muted">
+                              Android</td>
+                            <td class="fs15 fw600 text-right">18</td>
+                          </tr>
+                          <tr>
+                            <td class="va-m fw600 text-muted">
+                              Tablet</td>
+                            <td class="fs15 fw600 text-right">12</td>
+                          </tr>
+                          <tr>
+                          <td class="va-m fw600 text-muted">
+                               PS3</td>
+                            <td class="fs15 fw600 text-right">12</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- end: .col-md-12.admin-grid -->
+
+
+        <div class="col-md-6">
+            <div class="panel">
+                    <div class="panel-heading">
+                      <span class="panel-title">Permanencia de Usuario</span>
+                    </div>
+                        <div class="panel-body">
+                        </div>
+             </div>
+          </div>
+          
+         <div class="col-lg-6">
+              <div class="panel ">
+                <div class="panel-heading">
+                    <span class="panel-icon">
+                      <i class="fa fa-archive"></i>
+                    </span>
+                    <span class="panel-title"> Vídeos Recientemente Agregados </span>
+                  </div>
+                <div class="panel-menu panel-scroller scroller-sm pn bg-white scroller-overlay">
+                 <table class="table mbn tc-list-1 tc-text-muted-2 tc-fw600-2">
+                  <thead>
+                    <tr>
+                      <th><center>ID</center></th>
+                      <th>Nombre del Vídeo</th>
+                      <th><center>Ingreso</center></th>
+                      <th><center>Tamaño</center></th>
+                  </thead>
+                  
+                  <tbody>
+                    <tr>
+                      <td><center>1</center></td>
+                      <td>video-prueba1.mp4</br> <small> <a href="detalle.html">Editar</a> - <a href="#">Borrar</a> </small> </td>
+                      <td><center>10-03-2014</center></td>
+                      <td><center>2000 Mb</center></td>
+                    </tr>
+                    <tr>
+                      <td><center>1</center></td>
+                      <td>video-prueba1.mp4</br> <small> <a href="detalle.html">Editar</a> - <a href="#">Borrar</a> </small> </td>
+                      <td><center>10-03-2014</center></td>
+                      <td><center>2000 Mb</center></td>
+                    </tr>
+                    <tr>
+                      <td><center>1</center></td>
+                      <td>video-prueba1.mp4</br> <small> <a href="detalle.html">Editar</a> - <a href="#">Borrar</a> </small> </td>
+                      <td><center>10-03-2014</center></td>
+                      <td><center>2000 Mb</center></td>
+                    </tr>
+                    <tr>
+                      <td><center>1</center></td>
+                      <td>video-prueba1.mp4</br> <small> <a href="detalle.html">Editar</a> - <a href="#">Borrar</a> </small> </td>
+                      <td><center>10-03-2014</center></td>
+                      <td><center>2000 Mb</center></td>
+                    </tr>
+                    
+                </tbody>
+                </table>
+                </div>
+              </div>
+             </div>
+          
+             <div class="col-lg-6">
+              <!--Table Stats -->
+              <div class="panel">
+                <div class="panel-heading">
+                  <span class="panel-title">Tráfico Historico Mensual</span>
+                </div>
+                <div class="panel-menu panel-scroller scroller-md pn bg-white scroller-overlay">
+                  <table class="table table-bordered mbn tc-med-1 tc-bold-last ">
+                  <thead>
+                    <tr>
+                      <th><center><i class="fa fa-calendar-o"></i> Mes</center></th>
+                      <th><center><i class="fa fa-exchange"></i> Tráfico</center></th>
+                     </tr> 
+                  </thead>
+                  
+                  <tbody>
+                    <tr>
+                      <td><center>Enero</center></td>
+                      <td><center>1.0032.3032 tb</center></td>
+
+                    </tr>
+                    <tr>
+                       <td><center>Febrero</center></td>
+                      <td><center>1.0032.3032 tb</center></td>                                         
+                   </tr>
+                    <tr>
+                     <td><center>Marzo</center></td>
+                      <td><center>1.0032.3032 tb</center></td>
+                    </tr>
+                    <tr>
+                      <td><center>Abril</center></td>
+                      <td><center>1.0032.3032 tb</center></td>
+                     </tr>
+                     <tr>
+                      <td><center>Mayo</center></td>
+                      <td><center>1.0032.3032 tb</center></td>
+                     </tr>
+                     <tr>
+                      <td><center>Junio</center></td>
+                      <td><center>1.0032.3032 tb</center></td>
+                     </tr>
+                     <tr>
+                      <td><center>Julio</center></td>
+                      <td><center>1.0032.3032 tb</center></td>
+                     </tr>
+                     <tr>
+                      <td><center>Agosto</center></td>
+                      <td><center>1.0032.3032 tb</center></td>
+                     </tr>
+                    <tr>
+                      <td><center>Septiembre</center></td>
+                      <td><center>1.0032.3032 tb</center></td>
+                     </tr>
+                     <tr>
+                      <td><center>Octubre</center></td>
+                      <td><center>1.0032.3032 tb</center></td>
+                     </tr>
+                     <tr>
+                      <td><center>Noviembre</center></td>
+                      <td><center>1.0032.3032 tb</center></td>
+                     </tr>
+                     <tr>
+                      <td><center>Diciembre</center></td>
+                      <td><center>1.0032.3032 tb</center></td>
+                     </tr>
+                </tbody>
+                </table>
+                </div>
+              </div>
+            </div>
+
+<div class="col-lg-6">
+
+              <!-- Column Graph -->
+              <div class="panel">
+                <div class="panel-heading">
+                    <span class="panel-title">Videos más Visualizados</span>
+                  </div>
+                <div class="panel-menu panel-scroller scroller-md pn bg-white scroller-overlay">
+                 <table class="table mbn tc-list-1 tc-text-muted-2 tc-fw600-2">
+                  <thead>
+                    <tr>
+                      <th><center>ID</center></th>
+                      <th>Nombre del Vídeo</th>
+                      <th><center>Visualizaciones</center></th>
+                      <th><center>Estadísticas</center></th>
+                      <th><center>Tamaño</center></th>
+                  </thead>
+                  
+                  <tbody>
+                    <tr>
+                      <td><center>1</center></td>
+                      <td>video-prueba1.mp4</td>
+                      <td><center>100</center></td>
+                      <td><center><a href="stats-video.html"><i class="fa fa-bar-chart"></i></a></center></td>
+                      <td><center>100 Mb</center></td>
+                    </tr>
+                    <tr>
+                      <td><center>2</center></td>
+                      <td>video-prueba1.mp4</td>
+                      <td><center>100</center></td>
+                      <td><center><a href="stats-video.html"><i class="fa fa-bar-chart"></i></a></center></td>
+                       <td><center>100 Mb</center></td>
+                    </tr>
+                    
+                </tbody>
+                </table>
+              </div>
+ </div>
+      </div>         
+
+        </div>
+                                              
+             
+      </section>
+      <!-- End: Content -->
+
+      <!-- Begin: Page Footer -->
+      <footer id="content-footer">
+        <div class="row">
+          <div class="col-md-6">
+            <span class="footer-legal">© 2015 GrupoZ</span>
+          </div>
+          
+        </div>
+      </footer>
+      <!-- End: Page Footer -->
+
+    </section>
+    <!-- End: Content-Wrapper -->
+
+  </div>
+  <!-- End: Main -->
+
+<!-- BEGIN: PAGE SCRIPTS -->
+
+  <!-- jQuery -->
+  <script src="vendor/jquery/jquery-1.11.1.min.js"></script>
+  <script src="vendor/jquery/jquery_ui/jquery-ui.min.js"></script>
+  <script src="vendor/plugins/sparkline/jquery.sparkline.min.js"></script>
+  <script src="vendor/plugins/highcharts/highcharts.js"></script>
+  <script src="vendor/plugins/circles/circles.js"></script>
+
+   <!-- Theme Javascript -->
+  <script src="assets/js/utility/utility.js"></script>
+  <script src="assets/js/demo/demo.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/demo/charts/highcharts.js"></script>
+  <script type="text/javascript">
+  jQuery(document).ready(function() {
+
+    "use strict";
+
+    // Init Theme Core    
+    Core.init();
+
+    // Init Demo JS  
+    Demo.init();
+
+
+  });
+  </script>
+  <!-- END: PAGE SCRIPTS -->
+
+
+</body>
+
+</html>
